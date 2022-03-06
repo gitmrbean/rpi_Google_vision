@@ -7,6 +7,7 @@
 Raspberry - Installed with Dexter OS or Raspbian OS in Sdcard
 Raspberry pi (3B+) with attached camera is used as client to capture images. 
 Valid Google credentials for OAuth 2.0 to Access Google APIs 
+Install fswebcam and gcpview if RPI is connected to PC for viewing captured image.
 
 
 **Appliction**
