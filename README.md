@@ -21,7 +21,9 @@ Text to speech conversion of result
 
 Audio output of image recognition
 
-**Run COde**
+**Run Code**
+
+
 Camera attache to rpi
 python image_capture.py
 
