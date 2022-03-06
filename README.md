@@ -1,4 +1,4 @@
-# simple_rpi_gvision
+# rpi_goole_vision
 
 **Object detection Using MLAPI from Google Vision Api**
 
@@ -13,8 +13,6 @@ Install fswebcam and gcpview if RPI is connected to PC for viewing captured imag
 **Appliction**
 
 Python application to capture image  and send it to  Google vision api.
-
-Images are transferred to Google Cloud Platform using Google Vision API interface for Object detection, Landmark detection and Face detection using Google pre-trained models. 
 
 Receive the Json object of result of image recognition 
 
