@@ -13,19 +13,6 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-"""
-This script uses the Vision API's label detection capabilities to find a label
-based on an image's content.
-
-To run the example, install the necessary libraries by running:
-
-    pip install -r requirements.txt
-
-Run the script on an image to get a label, E.g.:
-
-    ./label.py <path-to-image>
-"""
-
 # [START import_libraries]
 import argparse
 import base64
@@ -71,38 +58,11 @@ def main(photo_file):
         response = service_request.execute()
         label1 = response['responses'][0]['labelAnnotations'][0]['description']
         print('RESPONSE RECEIVED  %s' % (response))
-        print('Found label: %s for %s' % (label1, photo_file))
-        #label2 = response['responses'][0]['imagePropertiesAnnotation'][0]['dominantColors'][0]['colors']
-        blue = response['responses'][0]['imagePropertiesAnnotation']['dominantColors']['colors'][0]['color']['blue']
-        red = response['responses'][0]['imagePropertiesAnnotation']['dominantColors']['colors'][0]['color']['red']
-        green  = response['responses'][0]['imagePropertiesAnnotation']['dominantColors']['colors'][0]['color']['green']
-        print('Green: %s ' % (green))
-        print('Blue: %s ' % (blue))
-        print('Red: %s ' % (red))
-    
-	new = './gspch.sh Green value is  ' +str(green) 
-        os.system(new) 
-	new = './gspch.sh Red value is  ' +str(red) 
-        os.system(new) 
-        cmp = (int(green)) > (int(red)) 
-        
-        if ((label1 == 'plant') or (label1 == 'food') or (label1 == 'flower') or (label1 == 'leaf'))  :     
-		if cmp: 
-			new = './gspch.sh Leaf is greeen in colour and healthy  '  
-        		print('Green value greater.Leaf healthy')
-	       		os.system(new) 
-        	else:
-			if(int(red) > 160):	
-				new = './gspch.sh Leaf is yellowish in colour and unhealthy. It has mineral deficiency .Please supply mineral suppliments to the plant '  
-        			print('Leaf is yellowish in color  unhealthy')
-        			os.system(new) 
-			else:
-				new = './gspch.sh Leaf is brownish in colour and unhealthy. It has mineral deficiency .Please supply mineral suppliments to the plant '  
-        			print('Leaf is brownish in color  unhealthy')
-        else :
-        		print('Non Agri object shown')
- 
-# [END parse_response]
+	     
+       
+        new = './gspch.sh Green value is  ' +str(label1) 
+	print('Found label: %s for %s' % (label1, photo_file))
+	
 
 
 # [START run_application]
